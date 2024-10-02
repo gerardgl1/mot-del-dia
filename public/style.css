@@ -1,0 +1,110 @@
+/* Estils generals */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Contenidor principal */
+#app {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Títol */
+h1 {
+    font-size: 2rem;
+    color: #0056b3;
+    margin-bottom: 1.5rem;
+}
+
+/* Definició */
+#definicio {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+/* Input */
+input[type="text"] {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus {
+    border-color: #0056b3;
+}
+
+/* Botó de verificar */
+button {
+    background-color: #0056b3;
+    color: white;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #004494;
+}
+
+/* Missatge de resultat */
+#missatge {
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+
+/* Estils per als missatges */
+.correcte {
+    color: #28a745;
+}
+
+.incorrecte {
+    color: #dc3545;
+}
+
+/* Responsivitat per a dispositius mòbils */
+@media (max-width: 480px) {
+    body {
+        padding: 1rem;
+    }
+
+    #app {
+        padding: 1.5rem;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    input[type="text"], button {
+        font-size: 0.9rem;
+    }
+}
