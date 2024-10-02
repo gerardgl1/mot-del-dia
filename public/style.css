@@ -1,4 +1,4 @@
-/* Estils generals */
+/* Restablir els estils predeterminats */
 * {
     margin: 0;
     padding: 0;
@@ -7,39 +7,45 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
+    background-color: #f4f4f4; /* Fons gris clar */
     color: #333;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
+    overflow: hidden;
 }
 
 /* Contenidor principal */
 #app {
-    background-color: #fff;
+    background-color: #fff; /* Fons blanc */
     padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px; /* Vores arrodonides */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombra suau */
     max-width: 400px;
     width: 100%;
     text-align: center;
+    border: 1px solid #ddd; /* Línia subtil al voltant */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* Títol */
 h1 {
-    font-size: 2rem;
-    color: #0056b3;
+    font-size: 1.8rem;
+    color: #0056b3; /* Blau fort */
     margin-bottom: 1.5rem;
 }
 
 /* Definició */
 #definicio {
     font-size: 1.2rem;
-    color: #555;
+    color: #555; /* Gris clar per al text */
     margin-bottom: 1.5rem;
     line-height: 1.6;
+    text-align: center;
 }
 
 /* Input */
@@ -55,12 +61,12 @@ input[type="text"] {
 }
 
 input[type="text"]:focus {
-    border-color: #0056b3;
+    border-color: #0056b3; /* Canvia el color de la vora quan es selecciona */
 }
 
 /* Botó de verificar */
 button {
-    background-color: #0056b3;
+    background-color: #0056b3; /* Blau */
     color: white;
     padding: 0.8rem 1.2rem;
     border: none;
@@ -72,7 +78,7 @@ button {
 }
 
 button:hover {
-    background-color: #004494;
+    background-color: #004494; /* Canvia el color del botó quan es passa per sobre */
 }
 
 /* Missatge de resultat */
@@ -83,11 +89,11 @@ button:hover {
 
 /* Estils per als missatges */
 .correcte {
-    color: #28a745;
+    color: #28a745; /* Verd per als missatges correctes */
 }
 
 .incorrecte {
-    color: #dc3545;
+    color: #dc3545; /* Vermell per als missatges incorrectes */
 }
 
 /* Responsivitat per a dispositius mòbils */
@@ -101,7 +107,7 @@ button:hover {
     }
 
     h1 {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
     }
 
     input[type="text"], button {

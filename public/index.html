@@ -7,13 +7,16 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Mot del dia</h1>
-    <p id="definicio">Aquesta és la definició del dia...</p>
+    <!-- Afegim un contenidor amb l'ID app perquè s'apliquin els estils correctament -->
+    <div id="app">
+        <h1>Mot del dia</h1>
+        <p id="definicio">Aquesta és la definició del dia...</p>
 
-    <input type="text" id="intento" placeholder="Escriu la paraula">
-    <button id="verificar">Comprovar</button>
+        <input type="text" id="intento" placeholder="Escriu la paraula">
+        <button id="verificar">Comprovar</button>
 
-    <p id="missatge"></p>
+        <p id="missatge"></p>
+    </div>
 
     <script src="app.js"></script>
 </body>
