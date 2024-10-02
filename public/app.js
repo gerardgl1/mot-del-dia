@@ -2,11 +2,13 @@ document.addEventListener('DOMContentLoaded', function () {
     let intentsRestants = 3;
 
     // Obtenir la definició del dia
-    fetch('/definicio-del-dia')
-        .then(response => response.json())
-        .then(data => {
-            document.getElementById('definicio').textContent = data.definicio;
-        });
+    fetch('/api/server')
+    .then(response => response.json())
+    .then(data => {
+      document.getElementById('definicio').textContent = data.definicio;
+    })
+    .catch(error => console.error('Error:', error));
+   
 
     // Gestionar la comprovació de l'intent
     document.getElementById('verificar').addEventListener('click', () => {
