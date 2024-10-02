@@ -1,25 +1,19 @@
 document.addEventListener('DOMContentLoaded', function () {
     let intentsRestants = 3;  // Límits d'intents per l'usuari
 
-    // Obtenir la definició del dia
+    // Obtenir la definició del dia des de l'API
     fetch('/api/server')
         .then(response => response.json())
         .then(data => {
             const definicio = data.definicio;  // Definició que ve del backend
             document.getElementById('definicio').textContent = definicio;
-        })
-        .catch(error => console.error('Error obtenint la definició:', error));
+            const paraulaCorrecta = data.paraula.toLowerCase();  // Paraula correcta del backend
 
-    // Afegir un listener al botó "Comprovar"
-    document.getElementById('verificar').addEventListener('click', () => {
-        const respostaUsuari = document.getElementById('intento').value.trim().toLowerCase();
+            // Afegir listener al botó "Comprovar"
+            document.getElementById('verificar').addEventListener('click', () => {
+                const respostaUsuari = document.getElementById('intento').value.trim().toLowerCase();
 
-        fetch('/api/server')
-            .then(response => response.json())
-            .then(data => {
-                const paraulaCorrecta = data.paraula.toLowerCase();  // Paraula correcta del backend
-
-                // Comparar la resposta de l'usuari amb la paraula correcta
+                // Comprovar si la resposta de l'usuari és correcta
                 if (respostaUsuari === paraulaCorrecta) {
                     document.getElementById('missatge').textContent = "Correcte! 🎉";
                     document.getElementById('missatge').classList.remove('incorrecte');
@@ -37,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         document.getElementById('verificar').disabled = true;  // Desactivar el botó després de 3 intents
                     }
                 }
-            })
-            .catch(error => console.error('Error verificant la paraula:', error));
-    });
+            });
+        })
+        .catch(error => console.error('Error obtenint la definició:', error));
 });
